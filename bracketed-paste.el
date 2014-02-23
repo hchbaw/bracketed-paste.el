@@ -147,8 +147,7 @@
           bracketed-paste--setup-entry-hooks)
     (mapc (hookf 'bracketed-paste--tty-state-exit-hook)
           bracketed-paste--setup-exit-hooks))
-  (global-set-key (kbd "\e[200~") 'bracketed-paste--pasting-enter)
-  (global-set-key (kbd "\e[201~") 'bracketed-paste--pasting-exit))
+  (global-set-key (kbd "\e[200~") 'bracketed-paste--pasting-enter))
 
 ;; Evil
 (defvar evil-normal-state-map)
