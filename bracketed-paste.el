@@ -193,8 +193,7 @@
                 (unless setupp
                   (bracketed-paste--setup)
                   (when (featurep 'evil)
-                    (with-eval-after-load 'evil
-                      (bracketed-paste--evil-setup)))
+                    (bracketed-paste--evil-setup))
                   (setq setupp t))))))
 
 (provide 'bracketed-paste)
