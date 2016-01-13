@@ -197,4 +197,4 @@
                   (setq setupp t))))))
 
 (provide 'bracketed-paste)
-;;; bracketed-paste ends here
+;;; bracketed-paste.el ends here
