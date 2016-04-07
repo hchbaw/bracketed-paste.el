@@ -128,7 +128,8 @@
   '(suspend-hook suspend-tty-functions kill-emacs-hook delete-frame-functions))
 
 (defun bracketed-paste--safe-tty-state-call (terminalish send-tty)
-  (cond ((null terminalish) (funcall send-tty))
+  (cond ((window-system) nil) ; don't call send-tty if not a TTY
+        ((null terminalish) (funcall send-tty))
         ((and (eq (terminal-live-p terminalish) t) ; borrowed from xt-mouse.el
               (not (string= (terminal-name terminalish) "initial_terminal")))
          (funcall send-tty terminalish))))
